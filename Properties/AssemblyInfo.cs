@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ServiceAccountSample")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("How to access AdminAPI.DirectoryService using Service Account, .Net Framework 4.8 (C#)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Easy ADM")]
 [assembly: AssemblyProduct("ServiceAccountSample")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyTrademark("Ilan Laloum")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
