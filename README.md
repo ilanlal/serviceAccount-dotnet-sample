@@ -50,13 +50,12 @@ You can use a service account to access data or perform actions by the robot acc
 
 ### `SACService.cs`
 ```csharp
-using Google.Apis.Auth.OAuth2;
+  using Google.Apis.Auth.OAuth2;
 
-using System;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
+  using System;
+  using System.Security.Cryptography.X509Certificates;
+  using System.Threading;
 
-namespace ServiceAccountSample {
   /// <summary>
   //     Google OAuth 2.0 credential for accessing protected resources using an access
   //     token. The Google OAuth 2.0 Authorization Server supports server-to-server interactions
@@ -92,12 +91,10 @@ namespace ServiceAccountSample {
       }
     }
   }
-}
 ```
 
 ### `DirectoryServiceStore.cs`
 ```csharp
-namespace ServiceAccountSample {
   using Google.Apis.Services;
   using AdminAPIs = Google.Apis.Admin.Directory.directory_v1;
 
@@ -109,12 +106,10 @@ namespace ServiceAccountSample {
         });
     }
   }
-}
 ```
 
 ### `SACInitializeParameters.cs`
 ```csharp
-namespace ServiceAccountSample {
   /// <summary>
   /// Initializer paramters to constructs any new google service account credential
   /// </summary>
@@ -143,7 +138,8 @@ namespace ServiceAccountSample {
     /// <param name="x509CertificateFilePath">The full path; name of a certificate file.</param>
     /// <param name="impersonateEmail">The email address of the user the application trying to impersonate</param>
     /// <param name="scopes">The scopes which indicate API access your application is requesting</param>
-    public SACInitializeParameters(string serviceAccountId, string x509CertificateFilePath, string impersonateEmail, string[] scopes) {
+    public SACInitializeParameters(
+      string serviceAccountId, string x509CertificateFilePath, string impersonateEmail, string[] scopes) {
       this.ServiceAccountId = serviceAccountId;
       this.ImpersonateEmail = impersonateEmail;
       this.Scopes = scopes;
@@ -154,8 +150,6 @@ namespace ServiceAccountSample {
       return Newtonsoft.Json.JsonConvert.SerializeObject(this);
     }
   }
-}
-
 ```
 
 ### Set up credentials parameters
@@ -178,7 +172,6 @@ namespace ServiceAccountSample {
 
 ### List top 10 users alias from Google Workspace Domain
 ```csharp
-namespace ServiceAccountSample {
   /// <summary>
   /// Example how to list all users from google workspace domain, using a service account (user impersonation).
   /// </summary>
@@ -215,7 +208,6 @@ namespace ServiceAccountSample {
       }
     }
   }
-}
 ```
 
 ## References
